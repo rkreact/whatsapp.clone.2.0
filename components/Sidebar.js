@@ -68,18 +68,11 @@ function Sidebar() {
             </Search>
 
             <SidebarButton onClick={createChat}>Start a new chat</SidebarButton>
-            {/* {chatsSnapshot11?.docs.[0].id} */}
-            {/* {chatsSnapshot.doc.map((chat, index) => {
-                <p key={index}>RRR</p>
-                // <Chat key={chat.index} id={chat.index} users={chat.data().users}> <p>RRR</p></Chat>
 
-            })} */}
             <p>{chatsSnapshot?.docs.map((chat, index) => {
                 return <ChatPage key={chat.id} id={chat.id} users={chat.data().users} />;
             })}</p>
-            {/* {chatsSnapshot?.docs.map((chat) => {
-                <ChatPage key={chat.id} id={chat.id} users={chat.data().users} />
-            })} */}
+
         </Container>
     )
 }
